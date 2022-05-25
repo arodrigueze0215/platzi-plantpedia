@@ -8,7 +8,8 @@
     "start": "next start",
     "test": "yarn type-check",
     "type-check": "tsc --noEmit",
-    "build:schema": "graphql-codegen --config codegen.yml"
+    "build:schema": "graphql-codegen --config codegen.yml",
+    "contentful:import": "contentful space import --config import/config.json"
   },
   "prettier": {
     "trailingComma": "es5",
@@ -18,7 +19,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
-    "next": "10.2.3",
+    "next": "^12.1.6",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
@@ -37,6 +38,7 @@
     "@types/react": "^17.0.6",
     "autoprefixer": "^10.2.5",
     "clsx": "^1.1.1",
+    "contentful-cli": "^1.12.32",
     "graphql": "^15.5.0",
     "lodash": "^4.17.21",
     "postcss": "^8.3.0",
