@@ -1,4 +1,4 @@
-import { GetStaticProps, InferGetStaticPropsType } from "Next";
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 
 import { Layout } from '@components/Layout'
 import { getPlantList, getAuthorList } from "@api";
@@ -13,7 +13,8 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       plants,
       authors
-    }
+    },
+    revalidate: 5 * 60 // one refresh every 5min
   }
 }
 
